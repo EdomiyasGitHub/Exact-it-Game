@@ -344,12 +344,18 @@ h1 {
     font-size: 1.5rem;
     overflow-y: auto;
     height: 60vh;
-    width: 80vw;
+    width: 800px;
     padding: 4%;
     border-radius: 10px;
 
     box-shadow: 0 3rem 5rem rgba(15, 15, 15, 0.8);
     z-index: 15;
+}
+
+@media screen and (max-width: 900px) {
+    .game-description {
+      width: 80%;
+    }
 }
 
 .game-description h1 {
