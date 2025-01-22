@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="icon" href="icons/favicon 2.png">
+    <title>NumPos</title>
+</head>
+
+<body>
+    <header class="header">
+        <button class="new-button">Play Again!</button>
+        <div class="right-header-section">
+            <button class="easy-button">Easy Mode</button>
+            <button class="hard-button">Hard Mode</button>
+        </div>
+    </header>
+
+    <main class="game-container">
+        <div class="game-title">
+            <h1 class="game-title">NumPos</h1>
+            <p class="game-intro">Guess the correct number</p>
+            <p class="how-to-play">HOW TO PLAY</p>
+        </div>
+
+        <div class="secret-number"></div>
+
+        <p class="timer">Time Left: <span class="time-left">60</span> seconds</p>
+
+        <div class="guess-container">
+            <div class="input-container">
+                <p class="n-input-text">Enter a 4-digit number</p>
+                <input type="text" maxlength="4" class="number input-field" placeholder="Guess">
+            </div>
+
+            <div class="guess-logger-title">
+                <p class="attempt-guess-title">Attempt</p>
+                <p class="n-guess-title">N</p>
+                <p class="p-guess-title">P</p>
+            </div>
+
+            <div class="guess-logger"></div>
+        </div>
+
+        <button class="btn guess-button">
+            Guess
+        </button>
+    </main>
+
+    <div class="about-container">
+        <a href="" class="source-code">Source Code</a>
+        <a href="https://github.com/EdomiyasGitHub" target="_blank" class="about-dev">About the dev</a>
+    </div>
+
+    <div class="game-description hidden">
+        <button class="close-modal">&times;</button>
+        <h1>How to Play NumPos</h1>
+        <p>
+            <strong>NumPos</strong> is a game that lets you accurately guess a randomly 
+            computed number by the game engine. There is a non-repeating 4-digit 
+            secret number (from 1023 to 9876) that you have to guess in order to win. 
+            There are a few game logics applied in order to make that possible.
+        </p>
+
+
+        <br>
+        <h2>Game Logic</h2>
+        <p>
+            Below your input field, you can see a table with three columns. Here is 
+            each column's purpose:
+        </p>
+        <br>
+        <h3>Attempt</h3>
+        <p>Displays all your previous guesses.</p>
+        <br>
+        <h3>N</h3>
+        <p>
+            N stands for <strong>Number</strong> and it displays how many 
+            numbers you guessed right on each attempt.
+        </p>
+        <br>
+        <h3>P</h3>
+        <p>
+            P stands for <strong>Position</strong> and it displays how many 
+            of the numbers you guessed are in the right position.
+        </p>
+
+        <br>
+        <h4>Example</h4>
+        <p>If the secret number is <strong>1234</strong>, and your guess is <strong>9246</strong>:
+            <br> Attempt = 9246
+            <br> N = 2 (because you correctly guessed the numbers 2 and 4)
+            <br> P = 1 (because your guess' 2 is at the exact position of the secret number's 2)
+        </p>
+
+        <br>
+        <p>
+            You win the game when both N and P are equal to 4 (which means you 
+            guessed 4 numbers and their positions correctly.)
+        </p>
+
+
+        <br>
+        <h2>Game Difficulties</h2>
+        <br>
+        <h3>Easy Mode</h3>
+        <p>
+            Easy Mode allows you to see a number if you correctly guess its position.
+            For instance, if the secret number is <strong>1234</strong>, and you 
+            guessed <strong>5674</strong>, the game will show ***4 instead of ****.
+
+            It's the default option and is recommended for beginners and casual experience.
+        </p>
+
+        <br>
+        <h3>Hard Mode</h3>
+        <p>
+            Hard Mode never lets you see the number until you actually win the game.
+
+            It's recommended for players who're looking for a challenge.
+        </p>
+    </div>
+
+    <div class="overlay hidden"></div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
