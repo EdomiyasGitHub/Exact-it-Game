@@ -342,11 +342,14 @@ h1 {
 
     background-color: rgb(31, 31, 31);
     font-size: 1.5rem;
-    overflow-y: auto;
     height: 60vh;
     width: 800px;
     padding: 4%;
     border-radius: 10px;
+    
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #6c757d transparent;
 
     box-shadow: 0 3rem 5rem rgba(15, 15, 15, 0.8);
     z-index: 15;
@@ -357,6 +360,34 @@ h1 {
       width: 80%;
     }
 }
+
+/* * This is to handle Chrome, Edge and Safari  */
+.game-description::-webkit-scrollbar {
+    width: 5px;
+}
+
+.game-description::-webkit-scrollbar-thumb {
+    background-color: #6c757d;
+    border-radius: 4px;
+}
+
+.game-description::-webkit-scrollbar-thumb:hover {
+    background-color: #495057;
+}
+
+.game-description::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.game-description::-webkit-scrollbar-track-piece {
+    background: transparent;
+}
+
+/* * This is to handle Internet Explorer */
+.game-description {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
 
 .game-description h1 {
     font-size: 3rem;
