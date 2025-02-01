@@ -2,7 +2,7 @@
 Exact-it is a browser-based number-guessing game that challenges users to guess a randomly generated four-digit number. The game features interactive gameplay with an easy and hard mode, a timer, and detailed feedback for each guess.
 
 ### Live Demo
-[GAME LINK](https://edomiyasgithub.github.io/NumPos-Game/)
+[GAME LINK](https://edomiyasgithub.github.io/Exact-it-Game/)
 
 
 ## Features
