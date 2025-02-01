@@ -81,6 +81,7 @@ const startTimer = function () {
             btnGuess.classList.add('disable-hover');
             input.classList.add('disable-hover');
             input.value = '';
+            input.blur();
         }
 
     }, 1000);
